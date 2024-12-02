@@ -1,0 +1,34 @@
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.section1 {
+    background-color: #ffcccb; /* Light Red */
+}
+
+.horizontal-scroll-section {
+    background: linear-gradient(to right, #0057ff, #ff0000);
+        overflow: hidden;
+}
+
+.horizontal-content {
+    display: flex;
+    width: 400vw; /* Adjust as needed */
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #f0f8ff; /* Alice Blue */
+}
+
+.section3 {
+    background-color: #90ee90; /* Light Green */
+}
