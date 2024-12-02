@@ -11,7 +11,7 @@
 }
 
 .horizontal-scroll-section {
-    background: linear-gradient(to right, #0057ff, #ff0000);
+    background: linear-gradient(to right, #ff0000, #0057ff);
         overflow: hidden;
 }
 
