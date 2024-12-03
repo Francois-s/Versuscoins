@@ -33,6 +33,15 @@ header nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin-right: 40px;
+}
+
+#blue-image {
+  border-radius: 150px;
+}
+
+#red-image {
+  border-radius: 150px;
 }
 
 header nav ul li a {
