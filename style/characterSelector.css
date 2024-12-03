@@ -1,0 +1,212 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: background 0.3s, opacity 0.3s;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+header nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* Main section styles */
+.vs-section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #0057ff, #ff0000);
+  position: relative;
+  overflow: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.vs-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.buy-button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f39c12, #e74c3c);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.buy-button:hover {
+  transform: scale(1.1);
+}
+
+.character {
+  width: 25%;
+  text-align: center;
+}
+
+.character img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cards .card {
+  width: 80px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-color: #f39c12;
+  transform: perspective(500px) rotateY(-10deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.cards .card:hover {
+  transform: perspective(500px) rotateY(-10deg) scale(1.1);
+  border-image-source: linear-gradient(45deg, red, yellow, green, blue);
+  border-image-slice: 1;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+}
+
+.cards .card:active {
+  transform: perspective(500px) rotateY(-10deg) scale(1.2);
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.cards .card:nth-child(1) {
+  transform: perspective(500px) rotateY(-10deg) rotateX(-5deg);
+}
+
+.cards .card:nth-child(2) {
+  transform: perspective(500px) rotateY(-15deg);
+}
+
+.cards .card:nth-child(3) {
+  transform: perspective(500px) rotateY(-20deg);
+}
+
+
+/* Effet 1 : Soulignement ondulé */
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00ff00, #ff00ff, #00ffff);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Effet 2 : Effet de zoom subtil */
+header nav ul li a:hover {
+  color: #ff00ff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Effet 3 : Effet d'apparition d'un contour */
+header nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+header nav ul li a:hover::before {
+  border-color: #ff00ff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vs-section {
+    flex-direction: column;
+  }
+
+  .character {
+    width: 100%;
+  }
+
+  .cards {
+    justify-content: space-around;
+  }
+}
