@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const scene = new ScrollMagic.Scene({
         triggerElement: ".horizontal-scroll-section",
         triggerHook: 0,
-        duration: "400%" // Adjust as needed
+        duration: "300%" // Adjust as needed
     })
     .setPin(".horizontal-scroll-section")
     .setTween(gsap.to(".horizontal-content", { x: "-300vw", ease: "none" }))
