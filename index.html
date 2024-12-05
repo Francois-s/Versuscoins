@@ -7,79 +7,105 @@
     <title>Versus Coin</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/horizontal.css">
+    <link rel="stylesheet" href="./style/tokenomics.css">
     <link rel="stylesheet" href="./style/characterSelector.css">
+    <link rel="stylesheet" href="./style/nav.css">
+
 
 </head>
 
 <body>
     <!-- Header -->
-    <header>
-        <div class="logo">Versus Coin</div>
-        <nav>
-            <ul>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#roadmap">Road Map</a></li>
-                <li><a href="#how-to-buy">How To Buy</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#whitepaper">White Paper</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="logo">LOGO</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#roadmap">Services</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <div class="menu-icons">
+            <span class="icon">☰</span>
+        </div>
     </header>
 
     <!-- Main Section -->
-    <main>
-        <div class="vs-section">
-            <div class="character blue-side">
-                <img id="blue-image" src="pictures/logo test.png" alt="Left Boxer">
-                <div class="cards">
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');">lvl 1</div>
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');">🔒</div>
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');">🔒</div>
-                </div>
-            </div>
-
-            <div class="center">
-                <div class="vs-text">VS</div>
-                <button class="buy-button">BUY</button>
-            </div>
-
-            <div class="character red-side">
-                <img id="red-image" src="pictures/logo test.png" alt="Right Boxer">
-                <div class="cards">
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');"></div>
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');"></div>
-                    <div class="card" data-image="pictures/logo test.png"
-                        style="background-image: url('pictures/logo test.png');"></div>
-                </div>
-
+    <div class="vs-section">
+        <div class="character blue-side">
+            <img id="blue-image" src="pictures/logo test.png" alt="Left Boxer">
+            <div class="cards">
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">LVL 1</div>
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">🔒</div>
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">🔒</div>
             </div>
         </div>
 
-        <div class="section horizontal-scroll-section">
-            <div class="horizontal-content">
-                <div class="item"><img src="pictures/images.png" alt="Image 1"></div>
-                <div class="item"><img src="pictures/pngtree-arrow-shape-black-simple-paint-png-image_5235842.png"
-                        alt="Image 2"></div>
-                <div class="item"><img src="pictures/images.png" alt="Image 3"></div>
-                <div class="item"><img src="pictures/pngtree-arrow-shape-black-simple-paint-png-image_5235842.png"
-                        alt="Image 4"></div>
+        <div class="center">
+            <div class="vs-text">VS</div>
+            <button class="buy-button">BUY</button>
+        </div>
+
+        <div class="character red-side">
+            <img id="red-image" src="pictures/logo test.png" alt="Right Boxer">
+            <div class="cards">
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">LVL 1</div>
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">🔒</div>
+                <div class="card" data-image="pictures/logo test.png"
+                    style="background-image: url('pictures/logo test.png');">🔒</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tokenomics-container">
+        <div class="pie-chart-container">
+            <canvas class="pie-chart"></canvas>
+        </div>
+        <div class="legend-container">
+            <div class="legend-item" data-color="#8ECAE6">
+                <div class="legend-color" style="background-color: #8ECAE6;"></div>
+                <div class="legend-label">Bleu clair - 20%</div>
+            </div>
+            <div class="legend-item" data-color="#219EBC">
+                <div class="legend-color" style="background-color: #219EBC;"></div>
+                <div class="legend-label">Turquoise - 30%</div>
+            </div>
+            <div class="legend-item" data-color="#FFB703">
+                <div class="legend-color" style="background-color: #FFB703;"></div>
+                <div class="legend-label">Jaune - 25%</div>
+            </div>
+            <div class="legend-item" data-color="#FB8500">
+                <div class="legend-color" style="background-color: #FB8500;"></div>
+                <div class="legend-label">Orange - 25%</div>
             </div>
         </div>
-        <div class="section section3">Section 3</div>
-
-        <!-- ScrollMagic -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="./JS/horizontal.js"></script>
-    </main>
-
+    </div>
+    <div id="roadmap" class="section horizontal-scroll-section">
+        <div class="horizontal-content">
+            <div class="item"><img src="pictures/images.png" alt="Image 1"></div>
+            <div class="item"><img src="pictures/pngtree-arrow-shape-black-simple-paint-png-image_5235842.png"
+                    alt="Image 2"></div>
+            <div class="item"><img src="pictures/images.png" alt="Image 3"></div>
+            <div class="item"><img src="pictures/pngtree-arrow-shape-black-simple-paint-png-image_5235842.png"
+                    alt="Image 4"></div>
+        </div>
+    </div>
+    <div class="section section3">
+        Bonjour
+    </div>
+    <script src="./JS/tokenomics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./JS/horizontal.js"></script>
     <script src="./JS/charachterSelector.js"></script>
 </body>
 

@@ -2,38 +2,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #121212;
+  background: linear-gradient(180deg, #023047, #002835);
   color: white;
   overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  transition: background 0.3s, opacity 0.3s;
-  z-index: 1000;
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin-right: 40px;
 }
 
 #blue-image {
@@ -44,24 +15,12 @@ header nav ul {
   border-radius: 150px;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: opacity 0.3s;
-}
-
-header nav ul li a:hover {
-  opacity: 0.7;
-}
-
 /* Main section styles */
 .vs-section {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #0057ff, #ff0000);
   position: relative;
   overflow: hidden;
 }
@@ -81,7 +40,7 @@ header nav ul li a:hover {
   padding: 15px 40px;
   font-size: 20px;
   font-weight: bold;
-  background: linear-gradient(to right, #f39c12, #e74c3c);
+  background: linear-gradient(to right, #FFB703, #de9f00);
   border: none;
   color: white;
   border-radius: 8px;
@@ -95,7 +54,7 @@ header nav ul li a:hover {
 }
 
 .character {
-  width: 25%;
+  width: 35%;
   text-align: center;
 }
 
@@ -126,9 +85,9 @@ header nav ul li a:hover {
 
 .cards .card:hover {
   transform: perspective(500px) rotateY(-10deg) scale(1.1);
-  border-image-source: linear-gradient(45deg, red, yellow, green, blue);
+  border-image-source: linear-gradient(to right, #f39c12, #e74c3c);
   border-image-slice: 1;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 10px rgba(255, 183, 3, 1)
 }
 
 .cards .card:active {

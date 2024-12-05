@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #023047; /* Fond bleu foncé */
+  }
+  
+  /* Logo section */
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFB703; /* Jaune vif pour le logo */
+  }
+  
+  /* Navigation links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FFF; /* Bleu clair */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #FFB703; /* Jaune vif au survol */
+  }
+  
+  /* Menu icon (for mobile or decorative) */
+  .navbar .menu-icons {
+    font-size: 1.5rem;
+    color: #8ECAE6; /* Bleu clair */
+    cursor: pointer;
+    display: none; /* Hidden for now, can be enabled for mobile */
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .menu-icons {
+      display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+  }
