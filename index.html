@@ -62,29 +62,39 @@
         </div>
     </div>
 
-    <div class="tokenomics-container">
-        <div class="pie-chart-container">
-            <canvas class="pie-chart"></canvas>
-        </div>
-        <div class="legend-container">
-            <div class="legend-item" data-color="#8ECAE6">
-                <div class="legend-color" style="background-color: #8ECAE6;"></div>
-                <div class="legend-label">Bleu clair - 20%</div>
+    <div class="tokenomics-container hidden">
+        <h2 class="tokenomics-title">Tokenomics</h2>
+        <div class="content-container">
+            <div class="info-container">
+                <ul class="legend-list">
+                    <li class="legend-item" data-color="#8ECAE6">
+                        <div class="legend-color" style="background-color: #8ECAE6;"></div>
+                        <div class="legend-label">Bleu clair - 20%</div>
+                    </li>
+                    <li class="legend-item" data-color="#219EBC">
+                        <div class="legend-color" style="background-color: #219EBC;"></div>
+                        <div class="legend-label">Turquoise - 30%</div>
+                    </li>
+                    <li class="legend-item" data-color="#FFB703">
+                        <div class="legend-color" style="background-color: #FFB703;"></div>
+                        <div class="legend-label">Jaune - 25%</div>
+                    </li>
+                    <li class="legend-item" data-color="#FB8500">
+                        <div class="legend-color" style="background-color: #FB8500;"></div>
+                        <div class="legend-label">Orange - 25%</div>
+                    </li>
+                </ul>
+                <p class="info-paragraph">
+                    Voici la répartition des tokens dans notre écosystème. Chaque couleur représente une catégorie différente de l'utilisation des tokens.
+                </p>
             </div>
-            <div class="legend-item" data-color="#219EBC">
-                <div class="legend-color" style="background-color: #219EBC;"></div>
-                <div class="legend-label">Turquoise - 30%</div>
-            </div>
-            <div class="legend-item" data-color="#FFB703">
-                <div class="legend-color" style="background-color: #FFB703;"></div>
-                <div class="legend-label">Jaune - 25%</div>
-            </div>
-            <div class="legend-item" data-color="#FB8500">
-                <div class="legend-color" style="background-color: #FB8500;"></div>
-                <div class="legend-label">Orange - 25%</div>
+            <div class="pie-chart-container">
+                <canvas class="pie-chart"></canvas>
             </div>
         </div>
     </div>
+    
+
     <div id="roadmap" class="section horizontal-scroll-section">
         <div class="horizontal-content">
             <div class="item"><img src="pictures/images.png" alt="Image 1"></div>
