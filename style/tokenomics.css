@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -96,5 +96,10 @@
 
     .pie-chart-container {
         width: 100%;
+    }
+
+    .tokenomics-container {
+        padding-top: 0px;
+        max-width: 80%;
     }
 }
