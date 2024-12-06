@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/tokenomics.css">
     <link rel="stylesheet" href="./style/characterSelector.css">
     <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/roadmap.css">
 
 
 </head>
@@ -32,10 +33,10 @@
     <!-- Main Section -->
     <div class="vs-section">
         <div class="character blue-side">
-            <img id="blue-image" src="pictures/logo test.png" alt="Left Boxer">
+            <img id="blue-image" src="pictures/test.png" alt="Left Boxer">
             <div class="cards">
-                <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">LVL 1</div>
+                <div class="card" data-image="pictures/test.png"
+                    style="background-image: url('pictures/test.png');">LVL 1</div>
                 <div class="card" data-image="pictures/logo test.png"
                     style="background-image: url('pictures/logo test.png');">🔒</div>
                 <div class="card" data-image="pictures/logo test.png"
@@ -69,23 +70,24 @@
                 <ul class="legend-list">
                     <li class="legend-item" data-color="#8ECAE6">
                         <div class="legend-color" style="background-color: #8ECAE6;"></div>
-                        <div class="legend-label">Bleu clair - 20%</div>
+                        <div class="legend-label">AirDrop - 20%</div>
                     </li>
                     <li class="legend-item" data-color="#219EBC">
                         <div class="legend-color" style="background-color: #219EBC;"></div>
-                        <div class="legend-label">Turquoise - 30%</div>
+                        <div class="legend-label">Marketing - 30%</div>
                     </li>
                     <li class="legend-item" data-color="#FFB703">
                         <div class="legend-color" style="background-color: #FFB703;"></div>
-                        <div class="legend-label">Jaune - 25%</div>
+                        <div class="legend-label">presale - 25%</div>
                     </li>
                     <li class="legend-item" data-color="#FB8500">
                         <div class="legend-color" style="background-color: #FB8500;"></div>
-                        <div class="legend-label">Orange - 25%</div>
+                        <div class="legend-label">Stacking - 25%</div>
                     </li>
                 </ul>
                 <p class="info-paragraph">
-                    Voici la répartition des tokens dans notre écosystème. Chaque couleur représente une catégorie différente de l'utilisation des tokens.
+                    Voici la répartition des tokens dans notre écosystème. Chaque couleur représente une catégorie
+                    différente de l'utilisation des tokens.
                 </p>
             </div>
             <div class="pie-chart-container">
@@ -93,8 +95,48 @@
             </div>
         </div>
     </div>
+    <div class="container-roadmap">
+        <h1 class="main-title">Roadmap</h1>
+        <ul class="timeline">
+            <li class="timeline-item" style="--accent-color:#41516C">
+                <div class="date">2002</div>
+                <div class="title">Title 1</div>
+                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#FBCA3E">
+                <div class="date">2007</div>
+                <div class="title">Title 2</div>
+                <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#E24A68">
+                <div class="date">2012</div>
+                <div class="title">Title 3</div>
+                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#1B5F8C">
+                <div class="date">2017</div>
+                <div class="title">Title 4</div>
+                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#4CADAD">
+                <div class="date">2022</div>
+                <div class="title">Title 5</div>
+                <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#1B5F8C">
+                <div class="date">2017</div>
+                <div class="title">Title 4</div>
+                <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li class="timeline-item" style="--accent-color:#4CADAD">
+                <div class="date">2022</div>
+                <div class="title">Title 5</div>
+                <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li>
+        </ul>
+    </div>
     
-
+    <!-- roadmap scroll horizontal 
     <div id="roadmap" class="section horizontal-scroll-section">
         <div class="horizontal-content">
             <div class="item"><img src="pictures/images.png" alt="Image 1"></div>
@@ -104,12 +146,14 @@
             <div class="item"><img src="pictures/pngtree-arrow-shape-black-simple-paint-png-image_5235842.png"
                     alt="Image 4"></div>
         </div>
-    </div>
-    <div class="section section3">
+    </div>    -->
+
+    <div class="section">
         Bonjour
     </div>
     <script src="./JS/tokenomics.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- ScrollMagic -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
@@ -117,6 +161,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="./JS/horizontal.js"></script>
     <script src="./JS/charachterSelector.js"></script>
+    <script src="./JS/roadmap.js"></script>
 </body>
 
 </html>

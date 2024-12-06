@@ -1,5 +1,4 @@
 .tokenomics-container {
-    background-color: #023047;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -11,6 +10,7 @@
     width: 100%;
     max-width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
 }
 
 .tokenomics-container.hidden {
