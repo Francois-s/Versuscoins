@@ -17,30 +17,41 @@
 
 <body>
     <!-- Header -->
-    <header class="navbar">
-        <div class="logo">LOGO</div>
-        <nav class="nav-links">
+    <header class="header">
+        <div class="menu-h" onclick="toggleMenu(this)">
+            <button class="menu" aria-label="Main Menu">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <path class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+            <span class="menu-h-sp">Menu</span>
+        </div>
+        <div class="menu-dropdown">
             <a href="#about">About</a>
             <a href="#tokenomics">Tokenomics</a>
             <a href="#roadmap">Services</a>
             <a href="#contact">Contact</a>
-        </nav>
-        <div class="menu-icons">
-            <span class="icon">☰</span>
         </div>
+        <button class="buy-btn">Buy</button>
     </header>
+
+
 
     <!-- Main Section -->
     <div class="vs-section">
         <div class="character blue-side">
             <img id="blue-image" src="pictures/test.png" alt="Left Boxer">
             <div class="cards">
-                <div class="card" data-image="pictures/test.png"
-                    style="background-image: url('pictures/test.png');">LVL 1</div>
-                <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">🔒</div>
-                <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">🔒</div>
+                <div class="card" data-image="pictures/test.png" style="background-image: url('pictures/test.png');">
+                </div>
+                <div class="card" data-image="pictures/lock.webp" style="background-image: url('pictures/lock.webp');">
+                </div>
+                <div class="card" data-image="pictures/lock.webp" style="background-image: url('pictures/lock.webp');">
+                </div>
             </div>
         </div>
 
@@ -53,11 +64,11 @@
             <img id="red-image" src="pictures/logo test.png" alt="Right Boxer">
             <div class="cards">
                 <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">LVL 1</div>
-                <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">🔒</div>
-                <div class="card" data-image="pictures/logo test.png"
-                    style="background-image: url('pictures/logo test.png');">🔒</div>
+                    style="background-image: url('pictures/logo test.png');"></div>
+                <div class="card" data-image="pictures/lock.webp" style="background-image: url('pictures/lock.webp');">
+                </div>
+                <div class="card" data-image="pictures/lock.webp" style="background-image: url('pictures/lock.webp');">
+                </div>
             </div>
 
         </div>
@@ -106,7 +117,8 @@
             <li class="timeline-item" style="--accent-color:#FBCA3E">
                 <div class="date">2007</div>
                 <div class="title">Title 2</div>
-                <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+                <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum
+                    vero nihil veniam.</div>
             </li>
             <li class="timeline-item" style="--accent-color:#E24A68">
                 <div class="date">2012</div>
@@ -135,7 +147,7 @@
             </li>
         </ul>
     </div>
-    
+
     <!-- roadmap scroll horizontal 
     <div id="roadmap" class="section horizontal-scroll-section">
         <div class="horizontal-content">

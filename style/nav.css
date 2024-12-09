@@ -1,52 +1,169 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-  }
-  
-  /* Logo section */
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FFB703; /* Jaune vif pour le logo */
-  }
-  
-  /* Navigation links */
-  .navbar .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .navbar .nav-links a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #FFF; /* Bleu clair */
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-links a:hover {
-    color: #FFB703; /* Jaune vif au survol */
-  }
-  
-  /* Menu icon (for mobile or decorative) */
-  .navbar .menu-icons {
-    font-size: 1.5rem;
-    color: #8ECAE6; /* Bleu clair */
-    cursor: pointer;
-    display: none; /* Hidden for now, can be enabled for mobile */
-  }
-  
-  /* Responsive adjustments (optional) */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-    .menu-icons {
-      display: block;
-    }
+/* Header principal */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 10px 20px;
+  position: relative;
+}
 
-    .logo {
-        display: none;
-    }
-  }
+/* Bouton Menu */
+.menu-h {
+  display: flex;
+  align-items: center;
+  border: 2px solid #f05438; /* Bordure orange */
+  border-radius: 20px;
+  cursor: pointer;
+  padding-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-h::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(240, 84, 56, 0.2);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.menu-h:hover::before {
+  width: 100%;
+}
+
+.menu-h-sp {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Icône SVG dans le menu */
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: #f05438;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* Menu déroulant */
+.menu-dropdown {
+  display: none; /* Masqué par défaut */
+  position: absolute;
+  top: 70px; /* Positionné sous le header */
+  left: 20px; /* Aligné avec le bouton menu */
+  flex-direction: column;
+  border: 2px solid #f05438; /* Bordure orange */
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.menu-dropdown a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-dropdown a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(240, 84, 56, 0.2);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.menu-dropdown a:hover::before {
+  width: 100%;
+}
+
+/* Menu déroulant visible quand le menu est ouvert */
+.menu-h.opened + .menu-dropdown {
+  display: flex; /* Affiche le menu */
+}
+
+/* Bouton Acheter */
+.buy-btn {
+  border: 2px solid #f05438; /* Bordure orange */
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(240, 84, 56, 0.2);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.buy-btn:hover::before {
+  width: 100%;
+}

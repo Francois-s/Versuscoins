@@ -180,15 +180,27 @@ header nav ul li a:hover::before {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .vs-section {
-    flex-direction: column;
+  .center {
+    display: none;
+  }
+
+  .blue-side {
+    margin-left: 10px;
+  }
+
+  .red-side {
+    margin-right: 10px;
   }
 
   .character {
-    width: 100%;
+    width: 45%;
   }
 
   .cards {
     justify-content: space-around;
+  }
+  
+  .cards .card {
+    height: 80px;
   }
 }
