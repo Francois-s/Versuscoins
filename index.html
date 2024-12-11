@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./style/roadmap.css">
     <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/popup.css">
 
 
 </head>
@@ -40,7 +41,23 @@
         <button class="buy-btn">Buy</button>
     </header>
 
-
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-header">choose your sides</div>
+            <div class="popup-options">
+                <div class="popup-option">
+                    <img src="./pictures/test.png" alt="Option 1">
+                    <div class="popup-option-title">gen-Z Coin</div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+                <div class="popup-option">
+                    <img src="pictures/logo test.png" alt="Option 2">
+                    <div class="popup-option-title">Gen-Y coin</div>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Section -->
     <div class="vs-section">
@@ -175,6 +192,7 @@
     <script src="./JS/charachterSelector.js"></script>
     <script src="./JS/roadmap.js"></script>
     <script src="./JS/magicanimation.js"></script>
+    <script src="./JS/popup.js"></script>
 </body>
 
 </html>
