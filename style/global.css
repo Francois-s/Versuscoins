@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Orbitron:wght@400..900&display=swap');
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(180deg, #023047, #002835);
+  background-image: url("../pictures/image.png");
+  color: white;
+  overflow-x: hidden;
+}
