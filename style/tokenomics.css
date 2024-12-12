@@ -6,6 +6,7 @@
     transition: opacity 0.5s, transform 0.5s;
     display: flex;
     flex-direction: column;
+    background-color: rgb(142 202 230 / 70%);
     align-items: center;
     width: 100%;
     max-width: 70%;
