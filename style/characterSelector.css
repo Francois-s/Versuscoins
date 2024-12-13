@@ -57,10 +57,11 @@
   width: 70px;
   height: 100px;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   border: 4px solid transparent;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #000000;
   transform: perspective(500px) rotateY(-10deg);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
@@ -84,6 +85,7 @@
 
 .cards .card:nth-child(1) {
   transform: perspective(500px) rotateY(-10deg) rotateX(-5deg);
+  background-color: #ffffff;
 }
 
 .cards .card:nth-child(2) {
@@ -96,6 +98,7 @@
 
 
 .cards .card:nth-child(4) {
+  background-color: #ffffff;
   transform: perspective(500px) rotateY(10deg) rotateX(5deg);
 }
 
