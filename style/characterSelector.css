@@ -1,11 +1,12 @@
 /* Main section styles */
 .vs-section {
   display: block;
-  height: 100vh;
+  height: 86vh;
   align-items: center;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  background-color: #DFBA7B;
 }
 
 .center {
@@ -163,7 +164,7 @@ header nav ul li a:hover::before {
 .container-chara {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 .mobil {

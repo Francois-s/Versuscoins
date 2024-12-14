@@ -4,6 +4,7 @@
   align-items: center; /* Aligne tous les éléments au centre verticalement */
   gap: 40px; /* Ajoute un espace constant entre les éléments */
   padding: 20px;
+  background-color: #DFBA7B;
 }
 
 .menu-container {
