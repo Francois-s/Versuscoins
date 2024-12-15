@@ -209,7 +209,7 @@
 
 .timeline-item.visible {
     animation: fadeIn 2s forwards;
-    background-color: rgb(142 202 230 / 70%);
+    background-color: rgb(227 215 182 / 60%);
 }
 
 .timeline-item.hidden {
