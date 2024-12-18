@@ -1,0 +1,38 @@
+.scroll-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #FC8722;
+    border: .3rem solid #000000;
+    padding: 10px 0;
+}
+
+.scroll-text {
+    display: flex;
+    gap: 25px;
+    animation: scroll 2000s linear infinite;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.scroll-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    white-space: nowrap;
+}
+
+.scroll-item img {
+    height: 30px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10000%);
+    }
+}
