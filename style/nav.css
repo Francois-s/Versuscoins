@@ -24,7 +24,7 @@
   background-color: #2a2a2a; /* Ombre légèrement plus claire que le noir */
   border-radius: 12px;
   z-index: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all .2s
 }
 
 .menu {
@@ -59,14 +59,22 @@
   text-decoration: none;
   background-color: transparent;
   color: #1c1c1c; /* Noir pour le texte */
-  transition: color 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out;
   padding-right: 10px;
 }
 
 .menu-item:hover {
+  text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
   color: #f98b0c; /* Texte orange au survol */
 }
 
 .menu-container.small .menu {
   padding: 25px 20px; /* Boutons plus petits */
+}
+
+
+@media screen and (max-width: 1031px) {
+  .header {
+    display: none;
+  }
 }
