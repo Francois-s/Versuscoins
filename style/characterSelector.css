@@ -168,7 +168,7 @@ header nav ul li a:hover::before {
 }
 
 .mobil {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 1300px) and (min-width: 769px) {
