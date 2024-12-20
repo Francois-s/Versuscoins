@@ -1,0 +1,53 @@
+.concept-container {
+    max-width: 1200px;
+    margin:50px auto;
+    padding: 20px;
+    position: relative;
+    background-color: #D4C5A8;
+    border-radius: 10px;
+    border: 2px solid #8C7E60;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.concept-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5E4C3;
+    border: 2px solid #8C7E60;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.concept-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #2E2E2E;
+    margin: 0;
+}
+
+.concept-content {
+    text-align: center;
+    position: relative;
+}
+
+.concept-text {
+    font-size: 16px;
+    color: #2E2E2E;
+    line-height: 1.5;
+}
+
+.concept-hand {
+    position: absolute;
+    right: -50px;
+    bottom: 50px;
+    width: 100px;
+    height: auto;
+}
