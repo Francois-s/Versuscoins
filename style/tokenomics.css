@@ -1,7 +1,7 @@
 .tokenomics-container {
     max-width: 1200px;
+    width: 86%;
     margin: 100px auto;
-    padding: 20px;
     background-color: #CBB78D;
     border-radius: 10px;
     border: 2px solid #8C7E60;
@@ -58,7 +58,7 @@
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    border: .1rem solid #2a2a2a;
+    border: 0.1rem solid #2a2a2a;
     border-radius: 4px;
 }
 
@@ -92,4 +92,32 @@
 .tokenomics-piechart {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .tokenomics-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tokenomics-details {
+        order: 1;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .tokenomics-chart {
+        order: 2;
+        max-width: 100%; /* S'assure que le graphique s'adapte aux petits écrans */
+        margin-top: 20px;
+    }
+
+    .tokenomics-item {
+        font-size: 27px; /* Réduit la taille de police pour les écrans mobiles */
+    }
+
+    .tokenomics-box {
+        width: 25px;
+        height: 25px;
+    }
 }
