@@ -1,11 +1,11 @@
 .concept-container {
     max-width: 1200px;
-    margin:50px auto;
+    margin: 100px auto 50px;
     padding: 20px;
     position: relative;
-    background-color: #D4C5A8;
+    background-color: #CBB78D;
     border-radius: 10px;
-    border: 2px solid #8C7E60;
+    border: 2px solid #3F3A30;
     width: 80%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -14,8 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F5E4C3;
-    border: 2px solid #8C7E60;
+    background-color: #FFF1D3;
+    border: 2px solid #3F3A30;
     padding: 10px 20px;
     border-radius: 10px;
     position: absolute;
@@ -27,6 +27,7 @@
 
 .concept-title {
     font-size: 24px;
+    width: 230px;
     font-weight: bold;
     text-align: center;
     color: #2E2E2E;
@@ -50,4 +51,20 @@
     bottom: 50px;
     width: 100px;
     height: auto;
+}
+
+.road-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.img-concept {
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
+    /* Conserve les proportions de l'image */
+    display: block;
 }
