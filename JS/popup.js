@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buyButtons = document.querySelectorAll('.buy-btn');
+    const buyButtons = document.querySelectorAll('.pop');
     const popupOverlay = document.getElementById('popupOverlay');
     const popup = document.querySelector('.popup');
 
