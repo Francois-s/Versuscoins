@@ -24,6 +24,7 @@
     position: relative;
     background-color: #FF914D;
     color: #FFF1D3;
+    text-shadow: 3px 0 #3D3D3D, -3px 0 #3D3D3D, 0 3px #3D3D3D, 0 -3px #3D3D3D, 3px 3px #3D3D3D, -3px -3px #3D3D3D, -3px 3px #3D3D3D, 3px -3px #3D3D3D;
     padding: 15px 30px;
     font-weight: bold;
     text-align: center;
@@ -43,4 +44,3 @@
   .button-container:hover .button {
     transform: translate(8px, 8px); /* La div claire s'enfonce */
   }
-  
