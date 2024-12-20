@@ -79,12 +79,13 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  border: 2px #2D2D2D solid;
 }
 
 #timeline .timeline-item .timeline-icon svg {
   position: relative;
-  top: 14px;
-  left: 14px;
+  top: 5px;
+  left: 3px;
 }
 
 #timeline .timeline-item .timeline-content {
