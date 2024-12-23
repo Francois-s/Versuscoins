@@ -5,12 +5,185 @@
 }
 
 .footer-ring {
+    position: relative;
     width: 100%;
     text-align: center;
+    z-index: 1;
 }
 
 .footer-ring img {
     width: 100%;
     height: auto;
-    display: block; /* Supprime les marges indésirables */
+    display: block;
+}
+
+.social-menu {
+    border: 2px #2D2D2D solid;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF1D3;
+    /* Couleur beige clair */
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.social-icon {
+    position: relative;
+    width: 60px;
+    /* Taille des boutons */
+    height: 60px;
+    background-color: #FFF;
+    /* Fond blanc pour les boutons */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 30px;
+    /* Taille des images au centre */
+    height: auto;
+    display: block;
+}
+
+.social-icon.discord {
+    background-color: #5865F2;
+    /* Couleur Discord */
+}
+
+.social-icon.twitter {
+    background-color: #1DA1F2;
+    /* Couleur Twitter */
+}
+
+.social-icon.telegram {
+    background-color: #239FDB;
+    /* Couleur Telegram */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    /* Effet d'agrandissement au survol */
+}
+
+
+.social-icon.discord {
+    background-color: #5865F2;
+    background-image: url('pictures/discord-icon.png');
+    /* Chemin vers l'icône Discord */
+}
+
+.social-icon.twitter {
+    background-color: #1DA1F2;
+    background-image: url('pictures/twitter-icon.png');
+    /* Chemin vers l'icône X (Twitter) */
+}
+
+.social-icon.telegram {
+    background-color: #0088CC;
+    background-image: url('pictures/telegram-icon.png');
+    /* Chemin vers l'icône Telegram */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.moving-coins {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    /* Les pièces apparaissent au-dessus du ring */
+}
+
+.coin-left,
+.coin-right {
+    position: absolute;
+    width: 250px;
+    /* Augmenter la taille des pièces */
+    height: auto;
+}
+
+.coin-left {
+    left: 10%;
+    top: 20%;
+    /* Ajustez pour qu'elle soit visible au-dessus */
+    animation: moveUpDown 4s infinite ease-in-out;
+}
+
+.coin-right {
+    right: 10%;
+    bottom: 20%;
+    /* Ajustez pour qu'elle soit visible au-dessus */
+    animation: moveSideways 6s infinite linear;
+}
+
+/* Animations */
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes moveSideways {
+    0% {
+        transform: translateX(100%);
+
+    }
+
+    50% {
+        transform: translateX(-0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-menu {
+        top: 75%;
+        padding: 10px 15px;
+    }
+
+    .coin-left,
+    .coin-right {
+        width: 70px;
+    }
+
+    .coin-left {
+        top: -10%;
+        left: 10%;
+    }
+
+    .coin-right {
+        bottom: 5%;
+    }
 }

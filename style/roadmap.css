@@ -201,7 +201,7 @@
     }
 
     #timeline:before {
-        left: 0;
+        left: -3px;
     }
 
     #timeline .timeline-item .timeline-content {
