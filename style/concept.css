@@ -1,5 +1,5 @@
 .concept-container {
-    max-width: 1200px;
+    max-width: 1480px;
     margin: 100px auto 50px;
     padding: 20px;
     position: relative;
@@ -40,15 +40,15 @@
 }
 
 .concept-text {
-    font-size: 16px;
+    font-size: 24px;
     color: #2E2E2E;
     line-height: 1.5;
 }
 
 .concept-hand {
     position: absolute;
-    right: -50px;
-    bottom: 50px;
+    right: -61px;
+    bottom: 120px;
     width: 100px;
     height: auto;
 }

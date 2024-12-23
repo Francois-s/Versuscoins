@@ -1,0 +1,71 @@
+/* Container principal */
+.rules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1480px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Items de règles */
+.rule-item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Cercle avec numéro */
+.rule-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+/* Texte des règles */
+.rule-text {
+    border: .1rem solid #2a2a2a;
+    border-radius: 10px;
+    margin: 0;
+    padding: 10px;
+    text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFF1D3;
+    flex: 1;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .rules-container {
+        padding: 10px;
+    }
+
+    .rule-circle {
+        margin-bottom: 10px;
+    }
+
+    .rule-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rule-text {
+        font-size: 16px;
+    }
+
+    .rule-circle {
+        width: 30px;
+        height: 30px;
+    }
+}

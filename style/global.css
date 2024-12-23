@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Orbitron:wght@400..900&family=Passion+One:wght@400;700;900&display=swap');
+
 /* Global styles */
 body {
   margin: 0;
@@ -9,4 +10,8 @@ body {
   background-image: url("../pictures/background6.png");
   color: white;
   overflow-x: hidden;
+}
+
+.shadow-text2 {
+  text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
 }
