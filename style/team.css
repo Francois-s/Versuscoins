@@ -26,6 +26,10 @@
     height: auto;
 }
 
+.background-y:hover {
+    transform: scale(1.1);
+}
+
 .image-row img:nth-child(2) {
     width: auto;
     height: auto;

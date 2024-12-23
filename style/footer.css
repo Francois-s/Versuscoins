@@ -1,0 +1,16 @@
+.footer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-ring {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-ring img {
+    width: 100%;
+    height: auto;
+    display: block; /* Supprime les marges indésirables */
+}
