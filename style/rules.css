@@ -47,7 +47,8 @@
 /* Responsivité */
 @media (max-width: 768px) {
     .rules-container {
-        padding: 10px;
+        width: 85%;
+        padding: 10px 0px;
     }
 
     .rule-circle {
@@ -63,9 +64,5 @@
     .rule-text {
         font-size: 16px;
     }
-
-    .rule-circle {
-        width: 30px;
-        height: 30px;
-    }
+    
 }
