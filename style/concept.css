@@ -47,8 +47,8 @@
 
 .concept-hand {
     position: absolute;
-    right: -61px;
-    bottom: 120px;
+    right: -58px;
+    top: -60px;
     width: 100px;
     height: auto;
 }
@@ -67,4 +67,11 @@
     height: auto;
     /* Conserve les proportions de l'image */
     display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .concept-hand {
+        width: 70px;
+        top: -25px;
+    }
 }
