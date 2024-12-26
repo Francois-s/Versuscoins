@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+#teams {
+    padding-bottom: 10px;
+}
+
 .image-row img {
     border-radius: 8px;
     height: auto;
