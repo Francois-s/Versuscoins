@@ -1,7 +1,7 @@
 /* Main section styles */
 .vs-section {
   display: block;
-  height: 86vh;
+  padding-bottom: 30px;
   align-items: center;
   justify-content: space-between;
   position: relative;

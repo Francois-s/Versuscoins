@@ -115,7 +115,6 @@
 .coin-left,
 .coin-right {
     position: absolute;
-    width: 250px;
     /* Augmenter la taille des pièces */
     height: auto;
 }
@@ -123,12 +122,14 @@
 .coin-left {
     left: 10%;
     top: 20%;
+    width: 350px;
     /* Ajustez pour qu'elle soit visible au-dessus */
     animation: moveUpDown 4s infinite ease-in-out;
 }
 
 .coin-right {
     right: 10%;
+    width: 350px;
     bottom: 20%;
     /* Ajustez pour qu'elle soit visible au-dessus */
     animation: moveSideways 6s infinite linear;
@@ -184,6 +185,8 @@
     }
 
     .coin-right {
-        bottom: 5%;
+        right: 10%;
+        width: 120px;
+        bottom: 45%;
     }
 }
