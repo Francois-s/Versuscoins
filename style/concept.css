@@ -1,5 +1,5 @@
 .concept-container {
-    max-width: 1480px;
+    max-width: 1400px;
     margin: 100px auto 50px;
     padding: 20px;
     position: relative;
@@ -79,7 +79,7 @@
     .concept-text {
         font-size: 20px;
     }
-    
+
     .concept-title {
         font-size: 23px;
     }
