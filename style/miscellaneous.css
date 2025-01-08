@@ -59,6 +59,14 @@
   border-radius: 20px;
 }
 
+.space-margin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: 100vw;  /* Centrage horizontal sur toute la largeur de la fenêtre */}
+
 @media screen and (max-width: 1250px) and (min-width:768px) {
   .h2-v2 {
     margin: 50px 18% 20px 18%;
