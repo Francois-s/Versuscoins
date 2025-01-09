@@ -44,7 +44,7 @@
 }
 
 .character img {
-  max-width: 500px;
+  max-height: 480px;
 }
 
 .cards {
@@ -172,7 +172,7 @@ header nav ul li a:hover::before {
 
 @media (max-width: 1300px) and (min-width: 769px) {
   .character img {
-    max-width: 300px;
+    max-height: 300px;
   }
 }
 
@@ -184,7 +184,6 @@ header nav ul li a:hover::before {
 
   .character img {
     max-width: 200px;
-    max-height: 200px;
     margin-left: -10px;
   }
 
