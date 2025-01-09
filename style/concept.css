@@ -26,8 +26,8 @@
 }
 
 .concept-title {
-    font-size: 40px;
-    width: 350px;
+    font-size: 45px;
+    width: 400px;
     font-weight: bold;
     text-align: center;
     color: #2E2E2E;
@@ -40,10 +40,10 @@
 }
 
 .concept-text {
-    font-size: 24px;
+    font-size: 32px;
     color: #2E2E2E;
     line-height: 1.1;
-    margin: 30px 0px 0px 0px;
+    margin: 45px 0px 0px 0px;
 }
 
 .concept-hand {
