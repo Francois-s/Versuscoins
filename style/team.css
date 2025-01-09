@@ -26,7 +26,7 @@
 
 .image-row img:nth-child(1),
 .image-row img:nth-child(3) {
-    width: 38%;
+    width: 47%;
     height: auto;
 }
 
@@ -41,6 +41,13 @@
     object-fit: contain;
 }
 
+@media screen and (max-width: 1250px) and (min-width:768px) {
+    .image-row img:nth-child(1),
+    .image-row img:nth-child(3) {
+        width: 37%;
+    }
+}
+
 @media (max-width: 768px) {
     .image-row {
         flex-direction: column;
@@ -53,6 +60,6 @@
 
     .image-row img:nth-child(1),
     .image-row img:nth-child(3) {
-        width: 75%;
+        width: 90%;
     }
 }

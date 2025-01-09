@@ -145,7 +145,8 @@
 }
 
 .timeline-content h2 {
-    margin: 0px 120px -20px 120px;
+    margin: 0px 50px -20px 50px;
+    font-size: 32px;
     position: relative;
     padding: 10px 10px;
     text-align: center;
@@ -161,7 +162,7 @@
 }
 
 .timeline-content p {
-    font-size: 16px;
+    font-size: 22px;
     border: 2px solid #2a2a2a;
     margin: 0;
     border-radius: 20px;
@@ -177,6 +178,11 @@
     .project-name {
         margin: 50px 31% 20px 31%;
     }
+
+    .timeline-content h2 {
+        font-size: 24px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -191,7 +197,7 @@
 
     .top-roadmap {
         margin-top: 0px;
-    }    
+    }
 
     .timeline-content h2 {
         margin: 0px 40px -20px 40px;
