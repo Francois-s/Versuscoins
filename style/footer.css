@@ -20,7 +20,7 @@
 .social-menu {
     border: 2px #2D2D2D solid;
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FFF1D3;
@@ -36,9 +36,9 @@
 
 .social-icon {
     position: relative;
-    width: 60px;
+    width: 100px;
     /* Taille des boutons */
-    height: 60px;
+    height: 100px;
     background-color: #FFF;
     /* Fond blanc pour les boutons */
     border-radius: 10px;
@@ -50,7 +50,7 @@
 }
 
 .social-icon img {
-    width: 30px;
+    width: 80px;
     /* Taille des images au centre */
     height: auto;
     display: block;
@@ -173,6 +173,10 @@
     .social-menu {
         top: 75%;
         padding: 10px 15px;
+    }
+
+    .social-icon img {
+        width: 30px;
     }
 
     .coin-left {
