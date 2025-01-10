@@ -56,12 +56,12 @@
 
 .cards .card {
   width: 70px;
-  height: 100px;
+  height: 103px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8px;
-  background-color: #000000;
+  border-radius: 10px;
+  background-color: #292929;
   transform: rotateY(-10deg);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
