@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function showPopup() {
         popupOverlay.style.display = 'flex';
         popup.style.opacity = '0';
-        popup.style.transform = 'scale(0.5) rotate(-180deg)';
+        popup.style.transform = 'scale(0.5) rotate(-40deg)';
 
         setTimeout(() => {
-            popup.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1.5s';
+            popup.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1s';
             popup.style.transform = 'scale(1) rotate(0deg)';
             popup.style.opacity = '1';
         }, 10);
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to hide popup with an exit animation
     function hidePopup() {
-        popup.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1.2s';
-        popup.style.transform = 'scale(0.5) rotate(180deg)';
+        popup.style.transition = 'transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1s';
+        popup.style.transform = 'scale(0.5) rotate(40deg)';
         popup.style.opacity = '0';
 
         setTimeout(() => {

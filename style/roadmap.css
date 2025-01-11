@@ -28,7 +28,7 @@
     padding: 20px 30px;
     margin: 50px 38% 20px 38%;
     font-size: 50px;
-    border: 2px solid #2a2a2a;
+    border: 2px solid #2d2d2d;
     background-color: #FFF1D3;
     color: #000000;
     border-radius: 20px;
@@ -52,7 +52,7 @@
     background: #FFF1D3;
     left: 49.8%;
     top: 0;
-    border: .1rem solid #2a2a2a;
+    border: .1rem solid #2d2d2d;
     position: absolute;
 }
 
@@ -152,7 +152,7 @@
     color: #FFF1D3;
     text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
     border-radius: 20px;
-    border: 2px solid #2a2a2a;
+    border: 2px solid #2d2d2d;
 }
 
 .top-roadmap {
@@ -161,7 +161,7 @@
 
 .timeline-content p {
     font-size: 23px;
-    border: 2px solid #2a2a2a;
+    border: 2px solid #2d2d2d;
     margin: 0;
     border-radius: 20px;
     line-height: 1.5;

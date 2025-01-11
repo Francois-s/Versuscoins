@@ -20,7 +20,7 @@
 .social-menu {
     border: 2px #2D2D2D solid;
     position: absolute;
-    top: 80%;
+    top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FFF1D3;
@@ -82,7 +82,7 @@
 }
 
 .social-icon.twitter {
-    background-color: #1DA1F2;
+    background-color: #000;
     background-image: url('pictures/twitter-icon.png');
     /* Chemin vers l'icône X (Twitter) */
 }

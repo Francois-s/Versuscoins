@@ -13,7 +13,7 @@
   left: 8px;
   width: 100%;
   height: 100%;
-  background-color: #2a2a2a;
+  background-color: #2d2d2d;
   /* Ombre légèrement plus claire que le noir */
   border-radius: 30px;
   z-index: 0;
@@ -21,7 +21,7 @@
 }
 
 .button {
-  border: .3rem solid #2a2a2a;
+  border: .3rem solid #2d2d2d;
   position: relative;
   background-color: #FF914D;
   color: #FFF1D3;
@@ -52,10 +52,10 @@
   text-align: center;
   padding: 10px 20px;
   margin: 50px 28% 20px 28%;
-  font-size: 40px;
-  border: 2px solid #2a2a2a;
+  font-size: 45px;
+  border: 2px solid #2d2d2d;
   background-color: #FFF1D3;
-  color: #2a2a2a;
+  color: #2d2d2d;
   border-radius: 20px;
 }
 
@@ -63,8 +63,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   /* Centrage horizontal sur toute la largeur de la fenêtre */
 }
 
@@ -83,5 +83,9 @@
     padding: 10px 20px;
     font-size: 22px;
 
+  }
+
+  .button {
+    font-size: 39px;
   }
 }

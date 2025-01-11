@@ -14,7 +14,7 @@
 .popup {
     background-color: #FFF1D3;
     border-radius: 10px;
-    border: 3px solid #2a2a2a;
+    border: 3px solid #2d2d2d;
     padding: 20px;
     width: 700px;
     max-width: 90%;
@@ -26,7 +26,7 @@
     font-size: 50px;
     font-weight: bold;
     margin: -50px 15% 0px;
-    text-shadow: 3px 0 #2D2D2D, -3px 0 #2D2D2D, 0 3px #2D2D2D, 0 -3px #2D2D2D, 3px 3px #2D2D2D, -3px -3px #2D2D2D, -3px 3px #2D2D2D, 3px -3px #2D2D2D;
+    text-shadow: 1px 0 #2D2D2D, -1px 0 #2D2D2D, 0 1px #2D2D2D, 0 -1px #2D2D2D, 1px 1px #2D2D2D, -1px -1px #2D2D2D, -1px 1px #2D2D2D, 1px -1px #2D2D2D;
     border: 2px solid #2d2d2d;
     margin-bottom: 10px;
     background-color: #FF914D;
@@ -63,9 +63,9 @@
     border-radius: 10px;
     font-size: 30px;
     font-weight: bold;
-    padding: 5px;
+    padding: 8px;
     text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
-    border: 2px solid #2a2a2a;
+    border: 2px solid #2d2d2d;
     margin-bottom: 10px;
     background-color: #FF914D;
     color: #FFF1D3;
@@ -93,6 +93,6 @@
     .popup-header {
         font-size: 30px;
         margin: -50px 5% 0px;
-        padding: 5pxx;
+        padding: 5px;
     }
 }
