@@ -15,7 +15,7 @@
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1480px;
     margin: 0 auto;
     background-size: cover;
     line-height: 20px;
@@ -131,9 +131,8 @@
 }
 
 .timeline-content img.timeline-image {
-    width: 150PX;
     height: 150px;
-    margin: 39px 0px 20px 0px;
+    margin: 50px 0px 0px 0px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -161,7 +160,7 @@
 }
 
 .timeline-content p {
-    font-size: 22px;
+    font-size: 23px;
     border: 2px solid #2a2a2a;
     margin: 0;
     border-radius: 20px;

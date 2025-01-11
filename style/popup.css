@@ -46,7 +46,6 @@
 }
 
 .popup-option img {
-    height: auto;
     max-height: 185px;
     margin-top: 30px;
     border-radius: 5px;
@@ -64,6 +63,7 @@
     border-radius: 10px;
     font-size: 30px;
     font-weight: bold;
+    padding: 5px;
     text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
     border: 2px solid #2a2a2a;
     margin-bottom: 10px;
@@ -74,4 +74,25 @@
 
 .buy-btn:hover {
     scale: 1.05;
+}
+
+
+@media screen and (max-width: 1250px) and (min-width:768px) {
+    .popup-option img {
+        max-height: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup-option img {
+        max-height: 120px;
+    }
+    .popup-option button {
+        font-size: 21px;
+    }
+    .popup-header {
+        font-size: 30px;
+        margin: -50px 5% 0px;
+        padding: 5pxx;
+    }
 }
