@@ -48,6 +48,7 @@
 }
 
 .gen-title {
+  padding: 5px 0px;
   font-size: 40px;
   color: #2E2E2E;
 }
@@ -174,14 +175,23 @@ header nav ul li a:hover::before {
   display: none !important;
 }
 
-@media (max-width: 1300px) and (min-width: 769px) {
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
   .character img {
     max-height: 300px;
   }
 }
 
+@media (max-width: 1300px) and (min-width: 769px) {
+  .character img {
+    max-height: 250px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .vs-section  {
+    padding-bottom: 0px;
+  }
 
   .container-chara {
     padding-top: 40px;

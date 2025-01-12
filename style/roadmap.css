@@ -171,7 +171,6 @@
     background-color: #CBB78D;
 }
 
-
 @media screen and (max-width: 1300px) and (min-width: 768px) {
     .project-name {
         margin: 50px 31% 20px 31%;
@@ -180,6 +179,10 @@
     .timeline-content h2 {
         font-size: 24px;
     }
+    .timeline-content p {
+        font-size: 18px;
+    }
+
 
 }
 

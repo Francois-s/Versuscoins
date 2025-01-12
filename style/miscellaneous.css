@@ -85,6 +85,11 @@
 
   }
 
+  .space-margin {
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+
   .button {
     font-size: 39px;
   }
