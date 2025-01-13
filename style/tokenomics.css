@@ -1,3 +1,5 @@
+/* Ajout des animations pour les hovers */
+
 .tokenomics-container {
     max-width: 1380px;
     width: 86%;
@@ -7,6 +9,12 @@
     border: 2px solid #2d2d2d;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tokenomics-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
 
 .tokenomics-title-wrapper {
@@ -22,6 +30,12 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tokenomics-title-wrapper:hover {
+    background-color: #fff3df;
+    transform: translateX(-50%) scale(1.1);
 }
 
 .tokenomics-title {
@@ -30,6 +44,11 @@
     text-align: center;
     color: #2E2E2E;
     margin: 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.tokenomics-title:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .tokenomics-content {
@@ -51,6 +70,11 @@
     margin: 10px 0;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.tokenomics-item:hover {
+    text-shadow: 2px 2px 5px rgba(136, 50, 50, 0.5);
 }
 
 .tokenomics-box {
@@ -60,6 +84,12 @@
     margin-right: 10px;
     border: 2px solid #3F3A30;
     border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tokenomics-box:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .tokenomics-box.red {
@@ -92,6 +122,12 @@
 .tokenomics-piechart {
     width: 100%;
     height: auto;
+    transition: transform 0.5s ease;
+
+}
+
+.tokenomics-piechart:hover {
+    transform: rotate(360deg);
 }
 
 @media (max-width: 768px) {

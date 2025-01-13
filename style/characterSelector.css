@@ -18,6 +18,12 @@
   font-size: 60px;
   font-weight: bold;
   color: white;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.vs-text:hover {
+  color: #ff00ff;
+  text-shadow: 2px 2px 10px rgba(255, 0, 255, 0.5);
 }
 
 .buy-button {
@@ -31,11 +37,13 @@
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .buy-button:hover {
   transform: scale(1.1);
+  background: linear-gradient(to right, #ff00ff, #00ffff);
+  box-shadow: 0 10px 20px rgba(255, 0, 255, 0.5);
 }
 
 .character {
@@ -45,12 +53,23 @@
 
 .character img {
   max-height: 480px;
+  transition: filter 0.9s ease;
+}
+
+.character img:hover {
+  filter: grayscale(10%) sepia(50%);
 }
 
 .gen-title {
-  padding: 5px 0px;
+  padding: 10px 0px;
   font-size: 40px;
   color: #2E2E2E;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.gen-title:hover {
+  color: #ff6347;
+  text-shadow: 2px 2px 10px rgba(255, 99, 71, 0.5);
 }
 
 .cards {
@@ -69,7 +88,7 @@
   border-radius: 12px;
   background-color: #292929;
   transform: rotateY(-10deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -77,6 +96,7 @@
   transform: rotateY(-10deg) scale(1.1);
   border: 4px solid #f39c12;
   border-image-slice: 1;
+  background-color: #ff6347;
 }
 
 .cards .card:active {
@@ -100,7 +120,6 @@
 .cards .card:nth-child(3) {
   transform: rotateY(-20deg);
 }
-
 
 .cards .card:nth-child(4) {
   background-color: #ffffff;
@@ -144,7 +163,6 @@ header nav ul li a:hover::after {
 /* Effet 2 : Effet de zoom subtil */
 header nav ul li a:hover {
   color: #ff00ff;
-  transform: scale(1.1);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -164,6 +182,46 @@ header nav ul li a::before {
 header nav ul li a:hover::before {
   border-color: #ff00ff;
 }
+
+/* Effet pour l'image center1 */
+.center1 {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.center1:hover {
+  transform: rotate(10deg) scale(1.2);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Effet pour l'image center2 */
+.center2 {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.center2:hover {
+  transform: skew(0.5deg, 0.5deg);
+  opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
 
 .container-chara {
   display: flex;
