@@ -30,12 +30,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.tokenomics-title-wrapper:hover {
-    background-color: #fff3df;
-    transform: translateX(-50%) scale(1.1);
 }
 
 .tokenomics-title {
