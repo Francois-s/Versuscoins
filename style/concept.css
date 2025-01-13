@@ -1,13 +1,13 @@
 .concept-container {
     max-width: 1400px;
-    margin: 100px auto 50px;
+    margin: 100px auto 0px;
     padding: 20px;
     position: relative;
     background-color: #CBB78D;
     border-radius: 10px;
     border: 2px solid #3F3A30;
     width: 80%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #0000001a;
 }
 
 .concept-title-wrapper {
@@ -77,7 +77,7 @@
     }
 
     .concept-text {
-            margin-top: 10px;
+        margin-top: 10px;
     }
 
     .concept-text {
