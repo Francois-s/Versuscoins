@@ -241,7 +241,7 @@ header nav ul li a:hover::before {
 
 @media (max-width: 1300px) and (min-width: 769px) {
   .character img {
-    max-height: 250px;
+    max-height: 230px;
   }
 }
 
