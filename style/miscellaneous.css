@@ -51,7 +51,7 @@
 .h2-v2 {
   text-align: center;
   padding: 10px 20px;
-  margin: 50px 28% 20px 28%;
+  margin: 100px 35% 20px 35%;
   font-size: 45px;
   border: 2px solid #2d2d2d;
   background-color: #FFF1D3;
@@ -68,6 +68,12 @@
   /* Centrage horizontal sur toute la largeur de la fenêtre */
 }
 
+@media screen and (max-width: 1480px) and (min-width:1250px) {
+  .h2-v2 {
+    margin: 50px 28% 20px 28%;
+  }
+}
+
 @media screen and (max-width: 1250px) and (min-width:768px) {
   .h2-v2 {
     margin: 50px 18% 20px 18%;
@@ -75,7 +81,8 @@
 
   .button {
     font-size: 30px;
-  }}
+  }
+}
 
 @media (max-width: 768px) {
   .h2-v2 {
