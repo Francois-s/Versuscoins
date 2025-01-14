@@ -7,26 +7,6 @@
     margin: 0 auto;
 }
 
-@-webkit-keyframes flash {
-    0% {
-        opacity: .4;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes flash {
-    0% {
-        opacity: .4;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .centered-image-rules {
     max-width: 100%;
     height: auto;
