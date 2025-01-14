@@ -8,7 +8,14 @@
     border: 2px solid #3F3A30;
     width: 80%;
     box-shadow: 0 4px 6px #0000001a;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.concept-container:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
 
 .concept-title-wrapper {
     display: flex;

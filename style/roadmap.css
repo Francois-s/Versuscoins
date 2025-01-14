@@ -136,7 +136,6 @@
     object-fit: cover;
     border-radius: 5px;
     transition: transform 0.5s ease, filter 0.5s ease;
-
 }
 
 .timeline-content img.timeline-image:hover {
@@ -190,14 +189,12 @@
     .timeline-content p {
         font-size: 18px;
     }
-
-
 }
 
 @media screen and (max-width: 768px) {
     .project-name {
-        margin: 50px;
-        font-size: 45px;
+        margin: 50px 75px;
+        font-size: 34px;
     }
 
     .timeline-content {

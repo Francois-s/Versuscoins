@@ -5,13 +5,40 @@
     width: 80%;
     max-width: 1480px;
     margin: 0 auto;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.image-container-rules:hover {
+    transform: skew(0.5deg, 0.5deg);
+    opacity: 1;
+    -webkit-animation: flash 0.3s;
+    animation: flash  0.3s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .centered-image-rules {
     max-width: 100%;
     height: auto;
 }
-
 
 .container-rules {
     display: grid;
@@ -40,6 +67,7 @@
     color: #FFF1D3;
     text-shadow: 2px 0 #3F3A30, -2px 0 #3F3A30, 0 2px #3F3A30, 0 -2px #3F3A30, 2px 2px #3F3A30, -2px -2px #3F3A30, -2px 2px #3F3A30, 2px -2px #3F3A30;
 }
+
 .rules-left {
     margin-right: 30px;
     padding-right: 35px;
@@ -88,7 +116,7 @@
     font-size: 55px;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white; /* Ajout de la couleur du texte pour une meilleure lisibilité */
+    color: white;
 }
 
 .box1-rules::after {
@@ -103,14 +131,13 @@
     content: "2";
     top: 21px;
     left: -35px;
-
 }
 
 .box3-rules::after {
     background-color: #ABF760;
     content: "3";
     top: 21px;
-    left: -23px; /* Changement pour placer à gauche */
+    left: -23px;
 }
 
 .box4-rules::after {
@@ -118,4 +145,10 @@
     content: "4";
     top: 21px;
     right: -23px;
+}
+
+@media (max-width: 768px) {
+    .image-container-rules {
+        width: 90%;
+    }
 }

@@ -26,7 +26,7 @@
     font-size: 50px;
     font-weight: bold;
     margin: -50px 15% 0px;
-    text-shadow: 1px 0 #2D2D2D, -1px 0 #2D2D2D, 0 1px #2D2D2D, 0 -1px #2D2D2D, 1px 1px #2D2D2D, -1px -1px #2D2D2D, -1px 1px #2D2D2D, 1px -1px #2D2D2D;
+    text-shadow: 2px 0 #2D2D2D, -2px 0 #2D2D2D, 0 2px #2D2D2D, 0 -2px #2D2D2D, 2px 2px #2D2D2D, -2px -2px #2D2D2D, -2px 2px #2D2D2D, 2px -2px #2D2D2D;
     border: 2px solid #2d2d2d;
     margin-bottom: 10px;
     background-color: #FF914D;
@@ -45,11 +45,15 @@
     margin: 0 10px;
 }
 
-.popup-option img {
+.popup-pic-coin {
     max-height: 185px;
     margin-top: 30px;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.popup-pic-team {
+    max-height: 100px;
 }
 
 .popup-option-title {
@@ -71,28 +75,46 @@
     color: #FFF1D3;
 }
 
-
-.buy-btn:hover {
-    scale: 1.05;
+.buy-btn {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 6px 5px 0px 0px #2D2D2D;
 }
 
+.buy-btn:hover {
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0px 0px #2D2D2D;
+}
 
 @media screen and (max-width: 1250px) and (min-width:768px) {
-    .popup-option img {
+    .popup-pic-coin {
         max-height: 160px;
+    }
+
+    .popup-pic-team {
+        max-height: 70px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .popup-option img {
+    .popup-pic-coin {
         max-height: 120px;
     }
+
+    .popup-pic-team {
+        max-height: 50px;
+    }
+
     .popup-option button {
         font-size: 20px;
     }
+
     .popup-header {
         font-size: 30px;
         margin: -50px 5% 0px;
         padding: 5px;
+    }
+
+    .buy-btn {
+        box-shadow: 4px 6px 0px 0px #2D2D2D;
     }
 }

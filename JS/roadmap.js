@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item .text-content');
 
-    // Ensure elements exist
     if (!timelineItems || timelineItems.length === 0) {
         console.error('No timeline items found.');
         return;
@@ -24,15 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Initialize styles for timeline items
     timelineItems.forEach((item) => {
         item.style.transform = 'translateY(50px)';
         item.style.opacity = '0';
     });
 
-    // Attach scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Initial check
     handleScroll();
 });

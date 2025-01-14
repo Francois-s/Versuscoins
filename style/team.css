@@ -15,7 +15,9 @@
 }
 
 #teams {
-    padding-bottom: 10px;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .image-row img {
@@ -41,7 +43,7 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 1250px) and (min-width:768px) {
+@media screen and (max-width: 1650px) and (min-width:768px) {
     .image-row img:nth-child(1),
     .image-row img:nth-child(3) {
         width: 37%;

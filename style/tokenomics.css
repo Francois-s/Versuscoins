@@ -117,7 +117,6 @@
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
-
 }
 
 .tokenomics-piechart:hover {
@@ -159,6 +158,6 @@
     }
 
     .tokenomics-title {
-        font-size: 45px;
+        font-size: 34px;
     }
 }

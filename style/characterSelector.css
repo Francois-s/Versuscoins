@@ -160,13 +160,11 @@ header nav ul li a:hover::after {
   left: 0;
 }
 
-/* Effet 2 : Effet de zoom subtil */
 header nav ul li a:hover {
   color: #ff00ff;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Effet 3 : Effet d'apparition d'un contour */
 header nav ul li a::before {
   content: '';
   position: absolute;
@@ -183,7 +181,6 @@ header nav ul li a:hover::before {
   border-color: #ff00ff;
 }
 
-/* Effet pour l'image center1 */
 .center1 {
   transition: transform 0.5s ease, filter 0.5s ease;
 }
@@ -192,36 +189,6 @@ header nav ul li a:hover::before {
   transform: rotate(10deg) scale(1.2);
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
-
-/* Effet pour l'image center2 */
-.center2 {
-  transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.center2:hover {
-  transform: skew(0.5deg, 0.5deg);
-  opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
-}
-@-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-
 
 .container-chara {
   display: flex;
@@ -267,10 +234,6 @@ header nav ul li a:hover::before {
     margin-left: -10px;
   }
 
-  .cards {
-    margin-top: 10px;
-  }
-
   .center {
     display: none;
   }
@@ -288,6 +251,8 @@ header nav ul li a:hover::before {
   }
 
   .cards {
+    margin-top: 10px;
+    gap: 5px;
     justify-content: space-around;
   }
 

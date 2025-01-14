@@ -24,10 +24,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FFF1D3;
-    /* Couleur beige clair */
     border-radius: 10px;
     padding: 10px 30px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 10px 0px 0px #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,63 +38,52 @@
     position: relative;
     border: 2px #2D2D2D solid;
     width: 100px;
-    /* Taille des boutons */
     height: 100px;
     background-color: #FFF;
-    /* Fond blanc pour les boutons */
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
+    transition: all 0.3s ease-in-out;
+    box-shadow: 7px 10px 0px 0px #2D2D2D;
 }
 
 .social-icon img {
     width: 80px;
-    /* Taille des images au centre */
     height: auto;
     display: block;
 }
 
 .social-icon.discord {
     background-color: #5865F2;
-    /* Couleur Discord */
 }
 
 .social-icon.twitter {
     background-color: #1DA1F2;
-    /* Couleur Twitter */
 }
 
 .social-icon.telegram {
     background-color: #239FDB;
-    /* Couleur Telegram */
 }
 
 .social-icon.discord {
     background-color: #5865F2;
     background-image: url('pictures/discord-icon.png');
-    /* Chemin vers l'icône Discord */
 }
 
 .social-icon.twitter {
     background-color: #000;
     background-image: url('pictures/twitter-icon.png');
-    /* Chemin vers l'icône X (Twitter) */
 }
 
 .social-icon.telegram {
     background-color: #0088CC;
     background-image: url('pictures/telegram-icon.png');
-    /* Chemin vers l'icône Telegram */
 }
 
 .social-icon:hover {
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0px 0px #2D2D2D;
 }
 
 
@@ -107,13 +95,11 @@
     height: 100%;
     pointer-events: none;
     z-index: 2;
-    /* Les pièces apparaissent au-dessus du ring */
 }
 
 .coin-left,
 .coin-right {
     position: absolute;
-    /* Augmenter la taille des pièces */
     height: auto;
 }
 
@@ -131,8 +117,8 @@
     animation: moveUpDown 5s infinite linear;
 }
 
-/* Animations */
 @keyframes moveUpDown {
+
     0%,
     100% {
         transform: translateY(0);
@@ -142,9 +128,6 @@
         transform: translateY(50px);
     }
 }
-
-
-
 
 @media screen and (max-width: 1100px) and (min-width: 768px) {
     .coin-left {
@@ -156,17 +139,18 @@
     }
 }
 
-
 @media screen and (max-width:768px) {
     .social-icon {
         width: 50px;
         height: 50px;
         margin-top: -28px;
+        box-shadow: 3px 5px 0px 0px #2D2D2D;
     }
 
     .social-menu {
         top: 80%;
         padding: 10px;
+        box-shadow: 3px 7px 0px 0px #000000;
     }
 
     .social-icon img {

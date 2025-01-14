@@ -8,7 +8,6 @@
 
 .section1 {
     background-color: #ffcccb;
-    /* Light Red */
 }
 
 .horizontal-scroll-section {
@@ -19,14 +18,12 @@
 .horizontal-content {
     display: flex;
     width: 400vw;
-    /* Adjust as needed */
     height: 100vh;
 }
 
 .item {
     flex: 0 0 100vw;
     height: 100vh;
-    /* Each item takes the full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,5 +36,4 @@
 
 .section3 {
     background: linear-gradient(180deg, #023047, #002835);
-    /* Light Green */
 }
