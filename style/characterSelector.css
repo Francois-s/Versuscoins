@@ -53,12 +53,14 @@
 
 .character img {
   max-height: 480px;
-  transition: filter 0.9s ease;
+  transition: filter 3s ease;
 }
 
 .character img:hover {
-  filter: grayscale(10%) sepia(50%);
+  filter: brightness(1.2);
 }
+
+
 
 .gen-title {
   padding: 10px 0px;
@@ -214,7 +216,7 @@ header nav ul li a:hover::before {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .vs-section  {
+  .vs-section {
     padding-bottom: 0px;
   }
 
@@ -225,6 +227,7 @@ header nav ul li a:hover::before {
   .gen-title {
     font-size: 36px;
   }
+
   .mobil {
     display: contents !important;
   }
