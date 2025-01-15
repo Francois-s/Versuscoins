@@ -260,6 +260,7 @@ header nav ul li a:hover::before {
   }
 
   .cards .card {
-    height: 80px;
+    height: 59px;
+    border-radius: 6px;
   }
 }
