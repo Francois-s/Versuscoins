@@ -68,17 +68,14 @@
 
 .social-icon.discord {
     background-color: #5865F2;
-    background-image: url('pictures/discord-icon.png');
 }
 
 .social-icon.twitter {
     background-color: #000;
-    background-image: url('pictures/twitter-icon.png');
 }
 
 .social-icon.telegram {
-    background-color: #0088CC;
-    background-image: url('pictures/telegram-icon.png');
+    background-color: #fff1d3;
 }
 
 .social-icon:hover {
