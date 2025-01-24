@@ -58,25 +58,15 @@
     background-color: #5865F2;
 }
 
-.social-icon.twitter {
-    background-color: #1DA1F2;
-}
 
 .social-icon.telegram {
-    background-color: #239FDB;
-}
-
-.social-icon.discord {
-    background-color: #5865F2;
+    background-color: #0088cc;
 }
 
 .social-icon.twitter {
     background-color: #000;
 }
 
-.social-icon.telegram {
-    background-color: #fff1d3;
-}
 
 .social-icon:hover {
     transform: translate(8px, 8px);
