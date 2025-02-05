@@ -1,0 +1,385 @@
+/* Animations pour les emojis flottants */
+.floating-emoji {
+    position: absolute;
+    opacity: 0;
+    font-size: 45px;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+        transform: translateY(-200vh) rotate(360deg);
+    }
+    100% {
+        transform: translateY(-200vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Effet de feu d'artifice simple */
+.firework {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #FF3300;
+    box-shadow: 0 0 100px #FF3300,
+                0 0 150px #FF6600,
+                0 0 200px #FF0000;
+    transform-origin: center;
+    mix-blend-mode: screen;
+    z-index: 3;
+}
+
+.firework-particle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #FF3300, #FF0000);
+    border-radius: 50%;
+    box-shadow: 0 0 60px #FF3300,
+                0 0 90px #FF6600,
+                0 0 120px #FF0000;
+    mix-blend-mode: screen;
+    opacity: 0;
+}
+
+.firework-trail {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to top, transparent, #FF3300);
+    transform-origin: center bottom;
+}
+
+@keyframes fireworkExplode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fireworkParticle {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(var(--x, 300px), var(--y, 300px)) scale(0.1);
+        opacity: 0;
+    }
+}
+
+@keyframes particleTrail {
+    0% {
+        transform: scaleY(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(0.2) translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Animation des boxers */
+.blue-side .character img {
+    animation: boxerMove1 4s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.red-side .character img {
+    animation: boxerMove2 4s ease-in-out infinite 1s;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes boxerMove1 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-15px) translateX(-10px);
+    }
+    50% {
+        transform: translateY(0) translateX(0);
+    }
+    75% {
+        transform: translateY(10px) translateX(-5px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes boxerMove2 {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(10px) translateX(10px);
+    }
+    50% {
+        transform: translateY(0) translateX(0);
+    }
+    75% {
+        transform: translateY(-15px) translateX(5px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Animation de flottement pour les personnages */
+.float-effect {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animation des étincelles */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    animation: sparkleAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Nouveaux effets */
+
+/* 1. Effet de brillance sur les boutons */
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* 2. Effet de focus sur les cartes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* 3. Animation du texte de titre */
+.project-name, .tokenomics-title {
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px rgba(255,255,255,0.1);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(255,255,255,0.3),
+                     0 0 30px rgba(255,255,255,0.2);
+    }
+}
+
+/* 4. Animation de la timeline */
+.timeline-item {
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+}
+
+/* 5. Effet de particules sur le menu */
+.menu-item {
+    position: relative;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #DFBA7B;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+/* 6. Animation des images au scroll */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 7. Effet de hover sur les logos */
+img[src*="logo"] {
+    transition: filter 0.3s ease;
+}
+
+img[src*="logo"]:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(223,186,123,0.5));
+}
+
+/* 8. Animation du menu mobile */
+.menu-container.small {
+    transition: transform 0.3s ease;
+}
+
+.menu-container.small:hover {
+    transform: scale(1.05);
+}
+
+/* 9. Effet de parallaxe léger */
+.parallax {
+    transition: transform 0.1s ease-out;
+}
+
+/* 10. Animation des sections au scroll */
+.section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet d'éclair photo */
+.lightning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
+    background: #FFFFFF;
+    mix-blend-mode: screen;
+}
+
+.lightning::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x) var(--y), 
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0.95) 5%,
+                rgba(255, 255, 255, 0.9) 10%,
+                rgba(255, 255, 255, 0.8) 15%,
+                rgba(255, 255, 255, 0.6) 20%,
+                rgba(255, 255, 255, 0.4) 25%,
+                rgba(255, 255, 255, 0.2) 35%,
+                transparent 50%);
+    mix-blend-mode: screen;
+}
+
+@keyframes lightning {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    2% {
+        opacity: 0.9;
+    }
+    3% {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.5;
+    }
+    5% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
