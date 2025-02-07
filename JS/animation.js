@@ -208,7 +208,63 @@ function handleParallax(e) {
     });
 }
 
-// Initialisation des animations
+// Ajouter une fonction pour vérifier si la section VS est visible
+function isVsSectionVisible() {
+    const vsSection = document.querySelector('.vs-section');
+    if (!vsSection) return false;
+    
+    const rect = vsSection.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= window.innerHeight
+    );
+}
+
+// Créer des variables pour stocker les intervalles
+let emojiInterval;
+let fireworkInterval;
+let lightningInterval;
+let sparkleInterval;
+
+// Fonction pour démarrer les animations
+function startAnimations() {
+    if (emojiInterval) return; // Éviter les doublons
+
+    // Démarrer les emojis
+    emojiInterval = setInterval(createFloatingEmoji, 1000);
+    
+    // Démarrer les feux d'artifice
+    fireworkInterval = setInterval(() => {
+        if(Math.random() < 0.4) {
+            createFirework();
+        }
+    }, 800);
+    
+    // Démarrer les éclairs
+    lightningInterval = setInterval(() => {
+        if(Math.random() < 0.2) {
+            createLightning();
+        }
+    }, 1000);
+    
+    // Démarrer les étincelles
+    sparkleInterval = setInterval(createSparkle, 1000);
+}
+
+// Fonction pour arrêter les animations
+function stopAnimations() {
+    clearInterval(emojiInterval);
+    clearInterval(fireworkInterval);
+    clearInterval(lightningInterval);
+    clearInterval(sparkleInterval);
+    
+    emojiInterval = null;
+    fireworkInterval = null;
+    lightningInterval = null;
+    sparkleInterval = null;
+}
+
+// Modifier la fonction initAnimations
 function initAnimations() {
     // Ajouter l'aura d'énergie aux personnages
     addEnergyAura();
@@ -246,30 +302,19 @@ function initAnimations() {
         }, i * 200);
     }
     
-    // Réduire la fréquence des emojis flottants
-    setInterval(createFloatingEmoji, 1000); // Un emoji par seconde
-    
-    // Création immédiate de quelques feux d'artifice
-    for(let i = 0; i < 4; i++) {
-        setTimeout(() => createFirework(), i * 500);
+    // Remplacer la section des animations par :
+    if (isVsSectionVisible()) {
+        startAnimations();
     }
-    
-    // Fréquence des feux d'artifice
-    setInterval(() => {
-        if(Math.random() < 0.4) {
-            createFirework();
+
+    // Ajouter un écouteur de scroll pour démarrer/arrêter les animations
+    window.addEventListener('scroll', () => {
+        if (isVsSectionVisible()) {
+            startAnimations();
+        } else {
+            stopAnimations();
         }
-    }, 800);
-    
-    // Créer des éclairs
-    setInterval(() => {
-        if(Math.random() < 0.2) {
-            createLightning();
-        }
-    }, 1000);
-    
-    // Créer des étincelles périodiquement
-    setInterval(createSparkle, 1000);
+    });
 
     // Initialiser les animations au scroll
     handleScrollAnimations();
