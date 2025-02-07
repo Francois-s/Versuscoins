@@ -1,5 +1,5 @@
 // Emojis liés au combat
-const fightEmojis = ['🥊', '👊', '💥', '🤼', '🔥', '⚡', '💪', '🏆'];
+const fightEmojis = ['🥊', '👊', '💥', '🔥', '⚡', '💪', '🏆'];
 
 // Fonction pour créer un emoji flottant
 function createFloatingEmoji() {
@@ -10,18 +10,17 @@ function createFloatingEmoji() {
     const vsSection = document.querySelector('.vs-section');
     const rect = vsSection.getBoundingClientRect();
     
-    // Position aléatoire sur l'axe X dans la section VS
     const xPos = Math.random() * rect.width;
     emoji.style.left = `${xPos}px`;
     emoji.style.bottom = '0';
     
-    // Animation lente (12-18 secondes)
-    emoji.style.animation = `floatUp ${12 + Math.random() * 6}s ease-out forwards`;
+    // Animation plus courte (4-6 secondes)
+    emoji.style.animation = `floatUp ${4 + Math.random() * 2}s ease-out forwards`;
     
     vsSection.appendChild(emoji);
     
-    // Supprimer l'emoji après l'animation
-    setTimeout(() => emoji.remove(), 18000);
+    // Supprimer l'emoji plus tôt
+    setTimeout(() => emoji.remove(), 6000);
 }
 
 // Fonction pour créer un feu d'artifice
@@ -29,55 +28,98 @@ function createFirework() {
     const vsSection = document.querySelector('.vs-section');
     const rect = vsSection.getBoundingClientRect();
     
-    // Position aléatoire dans la section VS
-    const xPos = Math.random() * rect.width;
-    const yPos = rect.height * 0.3 + Math.random() * (rect.height * 0.4);
+    const xPos = Math.random() * (rect.width - 100);
+    const yPos = rect.height * 0.2 + Math.random() * (rect.height * 0.6);
     
-    // Créer le centre du feu d'artifice
     const firework = document.createElement('div');
     firework.className = 'firework';
     firework.style.left = `${xPos}px`;
     firework.style.top = `${yPos}px`;
+    firework.style.zIndex = '1000';
+    // Rendre l'élément firework complètement transparent
+    firework.style.backgroundColor = 'transparent';
+    firework.style.width = '0';
+    firework.style.height = '0';
     vsSection.appendChild(firework);
     
-    // Animation d'explosion
-    firework.style.animation = 'fireworkExplode 2s ease-out forwards';
+    const colors = [
+        '#FF1493', '#00FFFF', '#FFD700', '#FF4500',
+        '#7FFF00', '#FF69B4', '#4169E1', '#FFA500'
+    ];
+    const selectedColor = colors[Math.floor(Math.random() * colors.length)];
     
-    // Créer les particules
-    const numParticles = 24; // Plus de particules
-    for(let i = 0; i < numParticles; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'firework-particle';
+    const fragmentCount = 50;
+    
+    for(let i = 0; i < fragmentCount; i++) {
+        const fragment = document.createElement('div');
+        fragment.className = 'firework-fragment';
+        fragment.style.backgroundColor = selectedColor;
+        fragment.style.width = '6px';
+        fragment.style.height = '6px';
+        fragment.style.boxShadow = `0 0 10px ${selectedColor}, 0 0 20px ${selectedColor}`;
+        fragment.style.left = '50%';
+        fragment.style.top = '50%';
+        firework.appendChild(fragment);
+
+        const angle = (i / fragmentCount) * Math.PI * 2;
+        const distance = 100 + Math.random() * 200;
         
-        // Position initiale au centre
-        particle.style.left = '50%';
-        particle.style.top = '50%';
+        const offsetX = Math.cos(angle) * distance;
+        const offsetY = Math.sin(angle) * distance;
         
-        // Direction aléatoire pour chaque particule
-        const angle = (i / numParticles) * Math.PI * 2;
-        const distance = 200 + Math.random() * 200;
-        const x = Math.cos(angle) * distance;
-        const y = Math.sin(angle) * distance;
-        
-        particle.style.setProperty('--x', `${x}px`);
-        particle.style.setProperty('--y', `${y}px`);
-        particle.style.animation = 'fireworkParticle 2s ease-out forwards';
-        
-        // Ajouter des traînées
-        for(let j = 0; j < 3; j++) {
-            const trail = document.createElement('div');
-            trail.className = 'firework-trail';
-            trail.style.transform = `rotate(${angle * 180 / Math.PI}deg)`;
-            trail.style.animation = `particleTrail ${0.5 + Math.random() * 0.5}s ease-out forwards ${j * 0.1}s`;
-            particle.appendChild(trail);
-        }
-        
-        firework.appendChild(particle);
+        fragment.animate([
+            { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+            { transform: `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(0.5)`, opacity: 0 }
+        ], {
+            duration: 2000 + Math.random() * 1000,
+            easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
+            fill: 'forwards'
+        });
     }
     
-    // Supprimer le feu d'artifice après l'animation
+    // Réduire le délai de suppression
     setTimeout(() => firework.remove(), 2500);
 }
+
+// Mise à jour des styles
+const style = document.createElement('style');
+style.textContent = `
+    .firework {
+        position: absolute;
+        pointer-events: none;
+        z-index: 1000;
+        background: transparent;
+    }
+
+    .firework-fragment {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        mix-blend-mode: screen;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        70% {
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(-${window.innerHeight * 0.7}px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+    .floating-emoji {
+        position: absolute;
+        font-size: 3em;
+        pointer-events: none;
+        z-index: 1000;
+    }
+`;
+document.head.appendChild(style);
 
 // Fonction pour ajouter l'aura d'énergie
 function addEnergyAura() {
@@ -195,33 +237,37 @@ function initAnimations() {
         section.classList.add('section-animate');
     });
 
-    // Créer des emojis flottants périodiquement (deux fois plus fréquent)
-    setInterval(createFloatingEmoji, 1000);
+    // Réduire le nombre d'emojis initiaux
+    for(let i = 0; i < 3; i++) {
+        setTimeout(() => {
+            createFloatingEmoji();
+            if(i % 2 === 0) createFirework();
+            if(i % 3 === 0) createLightning();
+        }, i * 200);
+    }
     
-    // Créer des feux d'artifice
+    // Réduire la fréquence des emojis flottants
+    setInterval(createFloatingEmoji, 1000); // Un emoji par seconde
+    
+    // Création immédiate de quelques feux d'artifice
+    for(let i = 0; i < 4; i++) {
+        setTimeout(() => createFirework(), i * 500);
+    }
+    
+    // Fréquence des feux d'artifice
     setInterval(() => {
-        if(Math.random() < 0.15) {
+        if(Math.random() < 0.4) {
             createFirework();
         }
-    }, 2000);
+    }, 800);
     
-    // Créer des éclairs photo (deux fois plus fréquent)
+    // Créer des éclairs
     setInterval(() => {
-        if(Math.random() < 0.1) {
+        if(Math.random() < 0.2) {
             createLightning();
         }
-    }, 1500);
+    }, 1000);
     
-    // Créer des particules d'énergie autour des personnages
-    const charactersList = document.querySelectorAll('.character');
-    setInterval(() => {
-        charactersList.forEach(character => {
-            if(Math.random() < 0.5) { // 50% de chance pour chaque personnage
-                createEnergyParticles(character);
-            }
-        });
-    }, 100);
-
     // Créer des étincelles périodiquement
     setInterval(createSparkle, 1000);
 
