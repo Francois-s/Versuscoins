@@ -118,6 +118,35 @@ style.textContent = `
         pointer-events: none;
         z-index: 1000;
     }
+
+    .sparkle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #fff;
+        animation: sparkle-fade 1.5s ease-out forwards;
+    }
+
+    @keyframes sparkle-fade {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
 `;
 document.head.appendChild(style);
 
