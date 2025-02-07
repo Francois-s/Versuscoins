@@ -303,9 +303,14 @@ function initAnimations() {
         btn.classList.add('wave-effect');
     });
     
-    // Ajouter les classes d'animation aux éléments existants
+    // Gestion des animations des personnages
     const characters = document.querySelectorAll('.character img');
-    characters.forEach(char => char.classList.add('float-effect'));
+    characters.forEach(char => {
+        // On n'ajoute float-effect que sur les éléments qui ne sont pas des boxers
+        if (!char.closest('.blue-side') && !char.closest('.red-side')) {
+            char.classList.add('float-effect');
+        }
+    });
     
     const logos = document.querySelectorAll('.vs-section img[src*="logo"]');
     logos.forEach(logo => {

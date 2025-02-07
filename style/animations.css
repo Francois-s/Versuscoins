@@ -105,51 +105,47 @@
 }
 
 /* Animation des boxers */
-.blue-side .character img {
-    animation: boxerMove1 4s ease-in-out infinite;
+#blue-image {
+    animation: leftBoxer 6s ease-in-out infinite !important;
     position: relative;
     z-index: 2;
+    transform-origin: center center;
 }
 
-.red-side .character img {
-    animation: boxerMove2 4s ease-in-out infinite 1s;
+#red-image {
+    animation: rightBoxer 6s ease-in-out infinite !important;
     position: relative;
     z-index: 2;
+    transform-origin: center center;
 }
 
-@keyframes boxerMove1 {
+@keyframes leftBoxer {
     0% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0) scale(1);
     }
-    25% {
-        transform: translateY(-15px) translateX(-10px);
+    33% {
+        transform: translateY(10px) translateX(-10px) scale(1.01);
     }
-    50% {
-        transform: translateY(0) translateX(0);
-    }
-    75% {
-        transform: translateY(10px) translateX(-5px);
+    66% {
+        transform: translateY(-10px) translateX(-10px) scale(1.01);
     }
     100% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0) scale(1);
     }
 }
 
-@keyframes boxerMove2 {
+@keyframes rightBoxer {
     0% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0) scale(1);
     }
-    25% {
-        transform: translateY(10px) translateX(10px);
+    33% {
+        transform: translateY(-10px) translateX(10px) scale(1.01);
     }
-    50% {
-        transform: translateY(0) translateX(0);
-    }
-    75% {
-        transform: translateY(-15px) translateX(5px);
+    66% {
+        transform: translateY(10px) translateX(10px) scale(1.01);
     }
     100% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0) scale(1);
     }
 }
 
@@ -382,4 +378,9 @@ img[src*="logo"]:hover {
     100% {
         opacity: 0;
     }
+}
+
+/* Ajouter une exception pour les boxers */
+.character img.float-effect {
+    animation: none;
 }
