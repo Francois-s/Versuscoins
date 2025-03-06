@@ -323,63 +323,6 @@ img[src*="logo"]:hover {
     transform: translateY(0);
 }
 
-/* Effet d'éclair photo */
-.lightning {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 999;
-    background: #FFFFFF;
-    mix-blend-mode: screen;
-}
-
-.lightning::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at var(--x) var(--y), 
-                rgba(255, 255, 255, 1) 0%,
-                rgba(255, 255, 255, 0.95) 5%,
-                rgba(255, 255, 255, 0.9) 10%,
-                rgba(255, 255, 255, 0.8) 15%,
-                rgba(255, 255, 255, 0.6) 20%,
-                rgba(255, 255, 255, 0.4) 25%,
-                rgba(255, 255, 255, 0.2) 35%,
-                transparent 50%);
-    mix-blend-mode: screen;
-}
-
-@keyframes lightning {
-    0% {
-        opacity: 0;
-    }
-    1% {
-        opacity: 1;
-    }
-    2% {
-        opacity: 0.9;
-    }
-    3% {
-        opacity: 1;
-    }
-    4% {
-        opacity: 0.5;
-    }
-    5% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 /* Ajouter une exception pour les boxers */
 .character img.float-effect {
     animation: none;

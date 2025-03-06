@@ -181,31 +181,6 @@ function createSparkle() {
     }, 1500);
 }
 
-// Fonction pour créer un éclair photo
-function createLightning() {
-    const lightning = document.createElement('div');
-    lightning.className = 'lightning';
-    
-    // Position aléatoire du flash
-    const x = Math.random() * 100;
-    const y = Math.random() * 100;
-    lightning.style.setProperty('--x', `${x}%`);
-    lightning.style.setProperty('--y', `${y}%`);
-    
-    document.body.appendChild(lightning);
-    lightning.style.animation = 'lightning 0.5s ease-out forwards';
-    
-    // Créer un second flash rapide
-    setTimeout(() => {
-        const flash = lightning.cloneNode(true);
-        document.body.appendChild(flash);
-        flash.style.animation = 'lightning 0.3s ease-out forwards';
-        setTimeout(() => flash.remove(), 300);
-    }, 100);
-    
-    setTimeout(() => lightning.remove(), 500);
-}
-
 // Gestion des animations au scroll
 function handleScrollAnimations() {
     const elements = document.querySelectorAll('.fade-in-scroll');
@@ -252,7 +227,6 @@ function isVsSectionVisible() {
 // Créer des variables pour stocker les intervalles
 let emojiInterval;
 let fireworkInterval;
-let lightningInterval;
 let sparkleInterval;
 
 // Fonction pour démarrer les animations
@@ -269,12 +243,6 @@ function startAnimations() {
         }
     }, 800);
     
-    // Démarrer les éclairs
-    lightningInterval = setInterval(() => {
-        if(Math.random() < 0.2) {
-            createLightning();
-        }
-    }, 1000);
     
     // Démarrer les étincelles
     sparkleInterval = setInterval(createSparkle, 1000);
@@ -284,12 +252,10 @@ function startAnimations() {
 function stopAnimations() {
     clearInterval(emojiInterval);
     clearInterval(fireworkInterval);
-    clearInterval(lightningInterval);
     clearInterval(sparkleInterval);
     
     emojiInterval = null;
     fireworkInterval = null;
-    lightningInterval = null;
     sparkleInterval = null;
 }
 
@@ -332,7 +298,6 @@ function initAnimations() {
         setTimeout(() => {
             createFloatingEmoji();
             if(i % 2 === 0) createFirework();
-            if(i % 3 === 0) createLightning();
         }, i * 200);
     }
     
