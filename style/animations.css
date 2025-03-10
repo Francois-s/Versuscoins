@@ -261,20 +261,6 @@
     position: relative;
 }
 
-.menu-item::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #DFBA7B;
-    transition: width 0.3s ease;
-}
-
-.menu-item:hover::after {
-    width: 100%;
-}
 
 /* 6. Animation des images au scroll */
 .fade-in-scroll {
