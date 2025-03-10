@@ -202,6 +202,23 @@ header nav ul li a:hover::before {
   display: none !important;
 }
 
+/* shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.card.locked {
+  cursor: not-allowed;
+}
+
+.card.locked.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
 @media screen and (max-width: 1500px) and (min-width: 1300px) {
   .character img {
     max-height: 300px;
