@@ -36,7 +36,7 @@
 .social-icon {
     margin-top: -50px;
     position: relative;
-    border: 4px #2D2D2D solid;
+    border: 4px #000 solid;
     width: 100px;
     height: 100px;
     background-color: #FFF;
@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
-    box-shadow: 7px 10px 0px 0px #2D2D2D;
+    box-shadow: 7px 10px 0px 0px #000;
 }
 
 .social-icon img {
